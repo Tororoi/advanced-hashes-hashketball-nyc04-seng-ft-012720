@@ -29,12 +29,13 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  index = 0
-  while index < game_hash[:home][:players] do
-    if game_hash[:home][:players][index] = player_name
-      return game_hash[:home][:players][:points]
-    else
-      index += 1
+  game_hash.each do |place,team|
+    team.each do |attribute,data|
+      next unless attribute == :players
+
+      data.each do |player|
+        return player[:points] if player[:player_name] == player_name
+      end
     end
   end
 end
