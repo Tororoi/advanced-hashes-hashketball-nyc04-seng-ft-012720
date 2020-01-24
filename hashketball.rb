@@ -1,7 +1,7 @@
 # Write your code here!
 
-def game_hash
-  hashketball = {
+
+  game_hash = {
     :home => {
       :team_name => "Brooklyn Nets",
       :colors => ["Black","White"],
@@ -26,8 +26,8 @@ def game_hash
       ]
     }
   }
-end
+
 
 def num_points_scored(player_name)
-  while 
+  while
 end
