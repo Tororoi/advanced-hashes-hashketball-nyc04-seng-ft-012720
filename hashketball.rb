@@ -29,7 +29,12 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  if game_hash[:home][:players][:player_name].any? = player_name
-    return :players[:points]
+  index = 0
+  while index < game_hash[:home][:players] do
+    if game_hash[:home][:players][index] = player_name
+      return game_hash[:home][:players][:points]
+    else
+      index += 1
+    end
   end
 end
