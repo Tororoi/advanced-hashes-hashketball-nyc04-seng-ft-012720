@@ -1,6 +1,6 @@
 # Write your code here!
 
-
+def game_hash
   game_hash = {
     :home => {
       :team_name => "Brooklyn Nets",
@@ -26,8 +26,10 @@
       ]
     }
   }
+end
 
-
-# def num_points_scored(player_name)
-#   while
-# end
+def num_points_scored(player_name)
+  if game_hash[:home][:players][:player_name].any? = player_name
+    return :players[:points]
+  end
+end
