@@ -90,7 +90,7 @@ def player_stats(player_name)
         next unless player[:player_name] == player_name
 
         stats = player.delete_if do |key,value|
-          key == :player_name
+          key == :number
         end
       end
     end
