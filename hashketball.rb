@@ -79,3 +79,20 @@ def player_numbers(teams_name)
   end
   numbers
 end
+
+def player_stats(player_name)
+  stats = {}
+  game_hash.each do |team,info|
+    info.each do |attribute,data|
+      next unless attribute == :players
+
+      game_hash[team][attribute].each do |player|
+        next unless player[:player_name] == player_name
+
+        stats = player.delete_if do |key,value|
+          key == :player_name
+        end
+      end
+    end
+  end
+end
