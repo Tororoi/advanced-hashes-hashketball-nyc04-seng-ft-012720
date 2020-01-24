@@ -29,8 +29,8 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each do |team,value|
-    value.each do |attribute,data|
+  game_hash.each do |team,info|
+    info.each do |attribute,data|
       next unless attribute == :players
 
       data.each do |player|
@@ -41,8 +41,8 @@ def num_points_scored(player_name)
 end
 
 def shoe_size(player_name)
-  game_hash.each do |team,value|
-    value.each do |attribute,data|
+  game_hash.each do |team,info|
+    info.each do |attribute,data|
       next unless attribute == :players
 
       data.each do |player|
@@ -53,13 +53,13 @@ def shoe_size(player_name)
 end
 
 def team_colors(teams_name)
-  game_hash.each do |team,value|
-    return game_hash[team][:colors] if value[:team_name] == teams_name
+  game_hash.each do |team,info|
+    return game_hash[team][:colors] if info[:team_name] == teams_name
   end
 end
 
 def team_names
-  game_hash.map do |team,value|
-    value[:team_name]
+  game_hash.map do |team,info|
+    info[:team_name]
   end
 end
