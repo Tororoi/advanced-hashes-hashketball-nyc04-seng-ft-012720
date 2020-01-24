@@ -63,3 +63,18 @@ def team_names
     info[:team_name]
   end
 end
+
+def player_numbers(teams_name)
+  numbers = []
+  game_hash.each do |team,info|
+    next unless info[:team_name] == teams_name
+
+    info.each do |attribute,data|
+      next unless attribute == :players
+
+      data.each do |player|
+        numbers << player[:number]
+      end
+    end
+  end
+end
