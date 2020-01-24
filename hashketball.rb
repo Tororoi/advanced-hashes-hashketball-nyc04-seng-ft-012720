@@ -57,3 +57,9 @@ def team_colors(teams_name)
     return game_hash[team][:colors] if value[:team_name] == teams_name
   end
 end
+
+def team_names
+  game_hash.map do |team,value|
+    value[:team_name]
+  end
+end
