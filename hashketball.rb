@@ -89,7 +89,9 @@ def player_stats(player_name)
       game_hash[team][attribute].each do |player|
         next unless player[:player_name] == player_name
 
-        stats = player
+        stats = player.delete_if do |key,value|
+          key == :player_name
+        end
       end
     end
   end
