@@ -148,5 +148,7 @@ def winning_team
 
   if hornets_score.inject(:+) < nets_score.inject(:+)
     return game_hash[:home][:team_name]
+  else
+    return game_hash[:away][:team_name]
   end
 end
