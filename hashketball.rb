@@ -169,7 +169,7 @@ end
 
 def most_steals
   steals_record = 0
-  the_name = nil
+  the_name = ""
   game_hash.each do |team,info|
     info[:players].each do |player|
 
