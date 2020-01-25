@@ -138,7 +138,11 @@ def winning_team
   nets_score = []
   game_hash.each do |team,info|
     info[:players].each do |player|
-       score << player[:points]
+      if info[:team_name] == "Brooklyn Nets"
+        nets_score << player[:points]
+      else
+        hornets_score << player[:points]
+      end
     end
   end
 
