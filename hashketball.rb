@@ -114,3 +114,20 @@ def big_shoe_rebounds
 
   rebound_count
 end
+
+###--BONUS--###
+
+def most_points_scored
+  most_points = 0
+  mvp = nil
+  game_hash.each do |team,info|
+    info[:players].each do |player|
+
+      if player[:points] > most_points
+        most_points = player[:points]
+        mvp = player[:player_name]
+      end
+    end
+  end
+  
+end
