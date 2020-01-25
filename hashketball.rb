@@ -142,5 +142,5 @@ def winning_team
     end
   end
 
-  mvp
+  score.inject(:+)
 end
