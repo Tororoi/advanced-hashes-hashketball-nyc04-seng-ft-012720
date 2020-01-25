@@ -129,6 +129,18 @@ def most_points_scored
       end
     end
   end
-  
+
+  mvp
+end
+
+def winning_team
+  scores = {"Brooklyn Nets" => 0,"Charlotte Hornets" => 0}
+  score = []
+  game_hash.each do |team,info|
+    info[:players].each do |player|
+       score << player[:points]
+    end
+  end
+
   mvp
 end
